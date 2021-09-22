@@ -11,7 +11,7 @@ def get_page(url):
         soup (string): HTML source of scraped page.
     """
     
-    response = urllib.request.urlopen(url)
+    response =urllib.request.urlopen(url)
     soup = BeautifulSoup(response, 
                          'html.parser', 
                          from_encoding=response.info().get_param('charset'))
