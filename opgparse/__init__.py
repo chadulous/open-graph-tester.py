@@ -139,5 +139,5 @@ import flask
 import os
 def htmlify(og: OpenGraph):
     og = og()
-    template = open(f'{os.path.dirname(__file__)}\\templates\\index.html', 'r').read()
+    template = open(f'{os.path.dirname(__file__)}/templates/index.html', 'r').read()
     return flask.render_template_string(template, url=og['url'], image=og['image'], description=og['description'], simage=og['image'], sitename=og['sitename'], title=og['title'], base=og['baseurl'])
